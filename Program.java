@@ -28,37 +28,28 @@ public class Program7{
         System.out.println("Enter Stanley Nickels");
             stanleyNickels = numScanner.nextInt();
             
-           
-        System.out.println(schruteBucks + "." + stanleyNickels + "." + klevins);
-        
-        final double finalSchruteBucks = schruteBucks;
         
         
         double finalStanleyNickels = (double) klevins/12;
         
-        final double schToKlev = 1/20;
-        final double klevToStan = 1/12;
+        int schToKlev = 20;
+        int klevToStan = 12;
+
+        final double oldConversion = schToKlev*klevToStan;
+        final double totalStanleyNickels = 12*klevins + stanleyNickels + oldConversion*schruteBucks;
         
-        final double conversion = schToKlev*klevToStan;
+        final double newConversion = totalStanleyNickels/oldConversion;
         
-        double totalStanleyNickels = 12*klevins + stanleyNickels;
+        double newConversion1 = newConversion*100;
+        int newConversion2 = (int) newConversion1; 
+        double finalConversion = (double) newConversion2/100;
         
         
-        
-       
-        //int final conversion = schruteBucks2;
-        //int finalschruteBucks = 20*klevins;
-        //int finalKlevins = 12*stanleyNickels;
-        //int stanleyNickels2 = 0;
-        //int schruteBucks2 = 100 * stanleyNickels2;
-        
-        System.out.println(totalStanleyNickels);
+            
+        System.out.println(finalConversion);
         
         
 
-    
-      
-     
 
         
     }
@@ -71,8 +62,21 @@ public class Program7{
     
     
 }
+    
+    /*public double convertMoney(int schruteBucks, int stanleyNickels, int klevins){
+        //implement a function that converts from the old format to the new format        
+    }*/
+    
+    
+}
 //Paste console output below:
 /*
-
+Enter SchruteBucks
+5
+Enter klevins
+2
+Enter Stanley Nickels
+8
+5.13
 
 */
